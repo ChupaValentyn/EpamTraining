@@ -27,6 +27,7 @@ namespace RectangleTask1
         {
             double perimeter = 0;
             double[] site;
+
             site = this.SearchSite(array);
 
             if (site[0] < 0)
