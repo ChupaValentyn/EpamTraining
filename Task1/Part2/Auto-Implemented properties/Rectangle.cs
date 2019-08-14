@@ -63,11 +63,11 @@ namespace Auto_Implemented_properties
 
         private Coordinate SearchSite(Rectangle rec)
         {
-            Coordinate fall = new Coordinate(0, 0);
+            Coordinate site = new Coordinate(0, 0);
 
-            fall = rec.firstp - rec.secondp;
+            site = rec.firstp - rec.secondp;
 
-            return fall;
+            return site;
         }
     }
 }

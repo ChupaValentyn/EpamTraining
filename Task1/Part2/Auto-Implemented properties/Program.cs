@@ -27,7 +27,7 @@ namespace Auto_Implemented_properties
 
             Rectangle rec = new Rectangle(firstpoint, secondpoint);
 
-            Console.WriteLine($" Sqiare={rec.Square(rec)},Perimeter={rec.Perimeter(rec)}");
+            Console.WriteLine($" Square={rec.Square(rec)},Perimeter={rec.Perimeter(rec)}");
         }
     }
 }
