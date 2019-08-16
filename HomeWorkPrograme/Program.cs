@@ -8,7 +8,7 @@ namespace Task1
         {
             Program disp = new Program();
             disp.DisplayTask2();
-            //disp.DisplayTask1();
+            disp.DisplayTask1();
         }
 
         public void DisplayTask2()
