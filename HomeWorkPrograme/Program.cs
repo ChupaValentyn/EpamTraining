@@ -5,43 +5,63 @@ namespace Task1
     class Program
     {
         static void Main(string[] args)
-        {
+        { 
             Program disp = new Program();
-            disp.DisplayTask2();
+
             disp.DisplayTask1();
+
+            disp.DisplayTask2();
+
         }
 
         public void DisplayTask2()
         {
             Console.WriteLine("----------------------------Part1--------------------------------");
-            Part1.Rectangle r = new Part1.Rectangle();
-            r.Draw();
+            Part1.Rectangle rectangle = new Part1.Rectangle();
+            rectangle.Draw();
 
-            Part1.Square s = new Part1.Square();
-            s.Draw();
+            Part1.Square square = new Part1.Square();
+            square.Draw();
 
             Console.WriteLine("----------------------------Part2--------------------------------");
-            Part2.RectangleWithProperty Rec = new Part2.RectangleWithProperty(1,1);
-            Rec.Draw();
+            Part2.RectangleWithProperty recwithpro = new Part2.RectangleWithProperty(1,1);
+            recwithpro.Draw();
 
-            Part2.Square sq = new Part2.Square(0,0);
-            sq.Draw();
+            Part2.Square sqwithpro = new Part2.Square(0,0);
+            sqwithpro.Draw();
 
             Console.WriteLine("----------------------------Part3--------------------------------");
-            Part3.RectangleVirtual recv = new Part3.RectangleVirtual();
-            recv.Draw();
+            Part3.RectangleVirtual recvirtual = new Part3.RectangleVirtual();
+            recvirtual.Draw();
 
-            Part3.SquareVirual sqv = new Part3.SquareVirual();
+            Part3.SquareVirual sqvirtual = new Part3.SquareVirual();
 
-            sqv.Draw();
+            sqvirtual.Draw();
 
             Console.WriteLine("----------------------------Part4--------------------------------");
+            Part4.RectungleWithInterface recI = new Part4.RectungleWithInterface();
 
+            Part4.FigureWithInterFace fiI = new Part4.FigureWithInterFace();
+
+            Part4.SquareWithInterface sqI = new Part4.SquareWithInterface();
+
+            Program.DrawAll(recI, fiI, sqI) ;
+        }
+
+        public static void DrawAll(params Part4.IDrawable[] array)
+        {
+            foreach (var item in array)
+            {
+
+              item.Draw();
+
+            }
         }
 
         void DisplayTask1()
         {
-            Console.WriteLine("Rectangle");
+            Console.WriteLine("--------------------------Rectangle------------------------------");
+
             RectangleTask1.Rectangle t = new RectangleTask1.Rectangle();
             double[] arr = new double[4] { 0, 0, 0, 0 };
 

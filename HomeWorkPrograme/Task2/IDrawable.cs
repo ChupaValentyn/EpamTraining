@@ -6,6 +6,6 @@ namespace Part4
 {
     public interface IDrawable
     {
-         void Draw();
+        void Draw();
     }
 }

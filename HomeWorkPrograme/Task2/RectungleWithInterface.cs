@@ -4,9 +4,9 @@ using System.Text;
 
 namespace Part4
 {
-    class Rectungle : FigureWithInterFace , IDrawable
+    class RectungleWithInterface : IDrawable
     {
-        void IDrawable.Draw()
+        public void Draw()
         {
             Console.WriteLine("This is Rectungle");
         }

@@ -23,10 +23,11 @@ namespace Auto_Implemented_properties
             this.firstp = firstp;
             this.secondp = secondp;
         }
+
         public double Square(Rectangle rec)
         {
             double square = 0;
-            Coordinate rez = new Coordinate(0,0);
+            Coordinate rez = new Coordinate(0, 0);
 
             rez = this.SearchSite(rec);
 

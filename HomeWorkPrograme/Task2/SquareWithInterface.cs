@@ -4,13 +4,12 @@ using System.Text;
 
 namespace Part4
 {
-    class FigureWithInterFace : IDrawable
+    class SquareWithInterface : IDrawable
     {
         public void Draw()
         {
-            Console.WriteLine("This is class Figure ");
+            Console.WriteLine("This is Draw in Square");
         }
-       
        
     }
 }
