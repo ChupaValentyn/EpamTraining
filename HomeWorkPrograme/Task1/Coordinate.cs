@@ -9,7 +9,8 @@ namespace Auto_Implemented_properties
         private double x;
         public double X
         {
-            get { return this.x; }
+            get {
+                return this.x; }
             set { this.x = value; }
         }
         private double y;

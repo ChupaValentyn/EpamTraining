@@ -60,8 +60,7 @@ namespace Task1
 
         void DisplayTask1()
         {
-            Console.WriteLine("--------------------------Rectangle------------------------------");
-
+            Console.WriteLine("Rectangle");
             RectangleTask1.Rectangle t = new RectangleTask1.Rectangle();
             double[] arr = new double[4] { 0, 0, 0, 0 };
 
@@ -89,7 +88,11 @@ namespace Task1
                 Console.WriteLine("Error!! Point`s don`t correct.");
             }
             Console.WriteLine("-------------Auto-Implemented properties----------------------------");
-
+            Auto_Implemented_properties.Coordinate a = new Auto_Implemented_properties.Coordinate(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
+            Auto_Implemented_properties.Coordinate b = new Auto_Implemented_properties.Coordinate(Convert.ToDouble(Console.ReadLine()), Convert.ToDouble(Console.ReadLine()));
+            Auto_Implemented_properties.Rectangle c = new Auto_Implemented_properties.Rectangle(a,b);
+            Console.WriteLine(c.Square);
+            Console.WriteLine(c.Perimeter);
             Console.WriteLine("--------------------Circle-----------------------------");
             Circle.Circle y = new Circle.Circle();
 

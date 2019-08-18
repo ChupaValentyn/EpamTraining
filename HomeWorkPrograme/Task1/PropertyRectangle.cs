@@ -24,51 +24,39 @@ namespace Auto_Implemented_properties
             this.secondp = secondp;
         }
 
-        public double Square(Rectangle rec)
+        public double Square
         {
-            double square = 0;
-            Coordinate rez = new Coordinate(0, 0);
-
-            rez = this.SearchSite(rec);
-
-            square = rez.X * rez.Y;
-
-            if (square < 0)
+            get
             {
-                square *= -1;
-            }
+                Coordinate square = new Coordinate(0,0);
+                double ret=0;
+                square = (firstp - secondp);
+                ret = square.X * square.Y;
+                if (ret < 0)
+                {
+                    ret *= -1;  
+                }
 
-            return square;
+                return ret;
+            }
         }
 
-        public double Perimeter(Rectangle rectangle)
+        public double Perimeter
         {
-            double perimeter = 0;
-            Coordinate rez = new Coordinate(0, 0);
-            rez = this.SearchSite(rectangle);
-            
-            if (rez.Y < 0)
+            get
             {
-                rez.Y *= -1;
+                Coordinate Perim = new Coordinate(0, 0);
+                double ret = 0;
+                Perim = (firstp - secondp);
+                ret = (Perim.X  + Perim.Y)*2;
+                if (ret < 0)
+                {
+                    ret *= -1;
+                }
+
+                return ret;
             }
 
-            if (rez.X < 0)
-            {
-               rez.X *= -1;
-            }
-
-            perimeter = (rez.X + rez.Y) * 2;
-
-            return perimeter;
-        }
-
-        private Coordinate SearchSite(Rectangle rec)
-        {
-            Coordinate site = new Coordinate(0, 0);
-
-            site = rec.firstp - rec.secondp;
-
-            return site;
         }
     }
 }
