@@ -30,9 +30,16 @@ namespace HomeWork.Task3
                 strlist.Add(str);
                 counter++;
 
-                Console.WriteLine($"{counter}:{str}");
+              
 
             }
+            strlist.Sort();
+            strlist.Reverse();
+            foreach (var item in strlist)
+            {
+                Console.WriteLine($"{item}");
+            }
+
         }
 
         public void SearchZ()
@@ -75,7 +82,7 @@ namespace HomeWork.Task3
             Console.WriteLine($"\nWithout equal worlds :{counter}");
 
         }
-
+        
         public void PageNumber(int PageNumber)
         {
            

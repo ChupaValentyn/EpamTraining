@@ -1,4 +1,6 @@
-﻿using System;
+﻿using HomeWork.Task3;
+using System;
+using System.Collections.Generic;
 
 namespace Task1
 {
@@ -8,10 +10,11 @@ namespace Task1
         { 
             Program disp = new Program();
 
-            disp.DisplayTask1();
+            //disp.DisplayTask1();
 
-            disp.DisplayTask2();
+            //disp.DisplayTask2();
 
+            disp.DisplayTask3();
         }
 
         public void DisplayTask2()
@@ -164,6 +167,33 @@ namespace Task1
             result = NumbOne / NumbTwo;
             Console.Write("Result opration /:");
             result.GetInfo(result);
+        }
+        void DisplayTask3()
+        {
+            Console.WriteLine("-------------Part1----------------");
+            HomeWork.Task3.CreatingList crea = new CreatingList();
+
+            crea.create();
+
+            Console.WriteLine("-------------Part2----------------");
+            HomeWork.Task3.Addrange addrange = new Addrange();
+
+            addrange.Addrang();
+
+            Console.WriteLine("-------------Part3----------------");
+            HomeWork.Task3.RandomList rnd = new RandomList();
+            rnd.Randstr();
+
+            rnd.SearchZ();
+
+            rnd.SearchEqual();
+
+
+            Console.Write("Input PageNumber:");
+            int PageNumber = Convert.ToInt32(Console.ReadLine());
+
+            rnd.PageNumber(PageNumber);
+
         }
     }
 }
